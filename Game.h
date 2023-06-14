@@ -40,11 +40,11 @@ std::string roundWinner(int winner) {
     }
 }
 
-void totalWinner (int playerPoints, int computerPoints) {
-    if (playerPoints > computerPoints) {
+void totalWinner (int playerPoints) {
+    if (playerPoints > 0) {
         std::cout << "You won!" << std::endl;
     }
-    else if (playerPoints < computerPoints) {
+    else if (playerPoints < 0) {
         std::cout << "Computer won :(" << std::endl;
     }
     else {
