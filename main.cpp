@@ -5,7 +5,7 @@ int main() {
     std::cout << "|Rock, Paper, Scissors|" << std::endl;
     std::cout << "-----------------------" << std::endl;
     int playerChoice, computerChoice, rWinner;
-    int playerPoint = 0, computerPoint = 0;
+    int points = 0;
     int rounds;
     std::cout << "How many rounds?" << std::endl;
     std::cin >> rounds;
@@ -18,14 +18,14 @@ int main() {
         std::cout << "Winner: " << roundWinner(rWinner) << "\n" << std::endl;
         if (rWinner != REDO) {
             if (rWinner == PLAYER) {
-                playerPoint++;
+                points++;
             }
             if (rWinner == COMPUTER) {
-                computerPoint++;
+                points--;
             }
             rounds--;
         }
     }
-    totalWinner(playerPoint, computerPoint);
+    totalWinner(points);
     return 0;
 }
